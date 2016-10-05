@@ -1,0 +1,13 @@
+{
+	"addStatus":{
+		"sql":"INSERT INTO c_project_jobstatus (
+			ID,JOB_NAME,STATUS_NAME,STATUS_DESCRIPTION,PROGRESS,CREATED_TIME
+			) VALUES (
+			#id#,'#jobname#','#statusname#','#statusdescription#',#progress#,'#createdtime#')"
+	},
+	
+	"queryLatestStatusByJobName":{
+		"sql":"select * from c_project_jobstatus where JOB_NAME='#jobname#' 
+					order by CREATED_TIME desc limit 0,1"
+	}
+}
